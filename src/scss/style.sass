@@ -1,0 +1,172 @@
+@import "nullstyle.scss", "inputs.sass", "datepicker.scss", "buttons.sass", "section.sass", "columns.sass", "menu.scss", "burger.scss", "container.sass", "flex.sass", "caption.sass"
+
+
+$space-1: 4px
+$space-2: 10px
+$space-3: 16px
+$space-4: 20px
+$space-5: 28px
+$space-6: 44px
+
+    
+body 
+    font-family: 'Lato', sans-serif
+    
+    &.is-active
+        overflow: hidden
+   
+
+header 
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 100
+    width: 100%
+    height: 80px
+
+
+.card
+    width: 100%
+    &--
+        &space_xxl
+            padding: 60px  0
+            @media (min-width: 768px)
+                padding: 180px  0
+        &space_l
+            padding: 40px  0
+        &space_m
+            padding-bottom: 20px    
+        &space_top
+            padding-top: 60px 
+        &bg_grey
+            background: #f0f0f0  
+        &bg_white
+            background: #ffffff  
+        &mod
+            width: 100vw
+            background: rgba(255, 255, 255, 0.8 )
+           
+            
+          
+    &__
+        &pannel
+            position: relative
+            
+            &--
+                &space_xl
+                    margin-bottom: 32px
+                &space_l
+                    margin-bottom: 20px            
+                &bordered_grey
+                    border: 2px solid #c9c8c8
+                    padding: 8px                          
+            &:hover
+                .card__element--hidden
+                    visibility: visible;
+                    opacity: 1
+                    transition: 1s
+        &element
+            &--
+                &hidden
+                    position: absolute
+                    opacity: 0
+                    top: 0
+                    left: 0
+                    height: 100%
+                    width: 100%
+                    background: rgba(51, 173, 255, 0.623)
+                    visibility: hidden
+                    border: 8px solid white
+                    padding-top: 20% 
+                   
+.aspect-ratio
+    padding-bottom: 70%
+    position: relative
+    &__
+        &body
+            position: absolute
+            height: 100%
+.icon
+    &--
+        &color_grey
+            color: #292828
+        &color_aqua
+            color: #0ed9e6
+    &__
+        &wrapper
+            background-color: white
+            width: 40px
+            height: 40px
+            border-radius: 50%
+            padding: 10px         
+            font-size: 20px             
+                    
+
+
+
+                   
+
+
+
+.arrow
+    display: block
+    width: 20px
+    left: 50%
+    transform: translate(-50%, -50%)
+ 
+    &--
+        &down
+            position: relative
+            margin-bottom: 40px
+            animation: arrow--down 2s linear infinite
+            &::before,
+            &::after
+                content: ''
+                position: absolute
+                width: 4px
+                height: 16px
+                background: white
+                
+               
+                
+            &::before
+                transform: rotate(45deg)
+                left: 12px
+              
+
+            &::after
+                transform: rotate(-45deg)
+                left: 2px
+               
+       
+            
+            @keyframes arrow--down
+                0%
+                    opacity: 0
+                50%
+                    opacity: 1;     
+                100%
+                    opacity: 0;
+                    transform: translate(-50%, 48px)
+    
+     
+    
+
+           
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+        
+     
+        
+                   

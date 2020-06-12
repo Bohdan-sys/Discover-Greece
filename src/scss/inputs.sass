@@ -1,0 +1,87 @@
+/*forms validate*/
+
+
+
+
+.form-feedback 
+    input
+        font-size: 16px
+        background: #f3f3f3
+        border: 1px solid  #c0c0c0
+         
+        border-radius: 4px
+        outline: none
+        padding: 10px
+        width: 100%
+     
+
+
+@keyframes fadeOut 
+    from 
+        opacity: 1
+    
+
+    to 
+        opacity: 0
+    
+
+.just-validate-tooltip-container 
+    position: relative
+
+
+.just-validate-tooltip-hide 
+    animation: fadeOut .5s linear
+    opacity: 0
+
+
+.js-validate-error-label 
+    position: absolute
+    bottom: -20px
+    left: 0
+    z-index: 10
+    background: black
+    border-radius: 4px
+    padding: 4px 8px
+    font-size: 16px
+    pointer-events: none
+    transition: all .4s linear
+
+
+.js-validate-error-field 
+    border-radius: 4px
+
+
+
+
+.input
+    position: relative
+    &__
+        &wrapper
+            margin-bottom: 12px
+        &item 
+            width: 100%
+            &--
+                &color_grey
+                    background-color: #dbdbdb
+                &space_m
+                    height: 44px
+                    padding: 0 20px 0 4px
+                   
+        &icon
+            position: absolute
+            top: 10px
+            right: 0        
+            margin: 4px
+            color: grey
+            font-size: 16px
+           
+
+        
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button 
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+  

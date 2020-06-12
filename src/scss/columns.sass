@@ -1,0 +1,28 @@
+/* ---- cells ----*/
+$cells: 12
+
+$queries: (sm: 768px, md: 992px, lg: 1200px)
+
+
+
+.cell
+    padding: 0 16px
+    &--
+        &zero_space
+            padding: 0
+  
+          
+
+        @for $i from 1 through $cells 
+            &#{$i}
+                width: 100% / $cells * $i
+                @each $query, $value in $queries
+                    @media (min-width: $value)
+                        &-#{$query}
+                            width: 100% / $cells * $i
+        @media (min-width: 768px)
+            &display_flex
+                display: flex
+                flex-wrap: wrap
+               
+                

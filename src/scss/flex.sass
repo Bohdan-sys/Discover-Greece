@@ -1,0 +1,40 @@
+
+$space-between: space-between
+$center: center 
+$flex-start: flex-start 
+$flex-end: flex-end 
+
+
+.row 
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -16px
+
+    &--
+        &zero_space
+            margin: 0
+        &justify_between 
+            justify-content: $space-between
+        &justify_center
+            justify-content: $center
+        &justify_start
+            justify-content: $flex-start
+        &justify_end
+            justify-content: $flex-end
+            
+        &align_center
+            align-items: $center
+        &align_start
+            align-items: $flex-start
+        &align_end
+            align-items: $flex-end
+
+     
+         
+           
+
+
+
+
+
+
