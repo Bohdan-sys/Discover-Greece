@@ -38,7 +38,10 @@ header
             padding-bottom: 20px    
         &space_top
             padding-top: 60px
-       
+        &space_bottom
+            margin-bottom: -60px 
+            @media (min-width: 768px)
+                margin-bottom: -96px
         &bg_grey
             background: #f0f0f0  
         &bg_white
@@ -59,7 +62,7 @@ header
                 &space_l
                     margin-bottom: 20px            
                 &bordered_grey
-                    border: 2px solid #c9c8c8
+                    border: 1px solid #c9c8c8
                     padding: 8px                          
             &:hover
                 .card__element--hidden
