@@ -1,27 +1,44 @@
+//modules
+
+
+
+@@include('burger.js');
+
+@@include('datepicker-full.js');
+
+@@include('just-validate.js');
+
+
+
 window.addEventListener('DOMContentLoaded', function () {
-    //menu
-    @@include('menu.js');
-    @@include('burger.js');
+
+    // menu
+
+    if (window.innerWidth < 768) {
+        burger.addEventListener('click', () => toggle(burger));
+        items.forEach((item, i) => { item.addEventListener('click', () => toggle(item)) });
+    };
 
     //validator
-    @@include('just-validate.js');
+
     new window.JustValidate('.form-js', {
         rules: {
-
             emailSubmit: {
                 required: true,
                 email: true
             },
         }
     });
+
     //datepicker
-    @@include('datepicker-full.js');
+
+
     const elem = document.getElementById('foo');
     const rangepicker = new DateRangePicker(elem, {
-
         language: 'uk'
-
     });
+
+    //scroll
 
     const btn = document.querySelector('.js-btn_scroll'),
         block = document.querySelector('.js-block');
@@ -31,14 +48,7 @@ window.addEventListener('DOMContentLoaded', function () {
     };
     btn.addEventListener('click', scroll);
 
-
-
-
-
-
-
-
-
+    //google autocomplete
 
     var defaultBounds = new google.maps.LatLngBounds(
         new google.maps.LatLng(-37.966667, -156.283333),
@@ -53,9 +63,4 @@ window.addEventListener('DOMContentLoaded', function () {
     autocomplete = new google.maps.places.Autocomplete(input, options);
 
 });
-
-
-
-
-
 

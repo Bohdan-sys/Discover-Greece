@@ -32,12 +32,15 @@ const assignListeners = (wrapper) => {
             }
         });
     } else {
-
-
         wrapper.wrapper.addEventListener('mouseenter', () => toggle(wrapper))
         wrapper.wrapper.addEventListener('mouseleave', () => remove(wrapper))
+
         wrapper.wrapper.addEventListener('click', () => remove(wrapper))
     }
 }
-const menus = makeMenu()
-menus.forEach(menu => assignListeners(menu))
+// function call
+
+// window.addEventListener('DOMContentLoaded', function () {
+//     const menus = makeMenu()
+//     menus.forEach(menu => assignListeners(menu))
+// })
