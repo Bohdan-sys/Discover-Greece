@@ -38,8 +38,8 @@ let { src, dest } = require('gulp'),  //scenaries and plugins;
     groupMedia = require('gulp-group-css-media-queries'),
     uglify = require('gulp-uglify-es').default,       //optimize JS file
     imagemin = require('gulp-imagemin'),       //optimize images
-    sourcemaps = require('gulp-sourcemaps'), //
-    jsImport = require('gulp-js-import'); //import js
+    sourcemaps = require('gulp-sourcemaps'); //
+
 
 
 
@@ -92,7 +92,6 @@ function css() {
 
 function js() {                       //collect js function
     return src(path.src.js)  //callback js files from sourse folder
-        .pipe(jsImport({ hideConsole: true }))//import JS   
         .pipe(fileinclude())   //collect parts of files into one
         .pipe(dest(path.build.js))
         /*  .pipe(uglify())
