@@ -3,8 +3,8 @@ $screen-md: 992px
 $screen-lg: 1200px
 
     
-$space-s: 24px
-$space-m: 48px
+$space-s: 28px
+$space-m: 40px
 $space-l: 60px
 $space-xl: 96px
 $space-xxl: 100px
@@ -25,7 +25,9 @@ $space-xxl: 100px
         &space_m
             padding: $space-m 4px
         &space_s
-            padding: $space-s 4px
+            padding: $space-s - 20px 4px
+            @media (min-width: $screen-sm)
+                padding: $space-s 4px
         &space_l
             padding: $space-l 4px
             @media (min-width: $screen-sm)

@@ -1,13 +1,12 @@
 @import "nullstyle.scss", "inputs.sass", "datepicker.scss", "buttons.sass", "section.sass", "columns.sass", "menu.sass", "burger.sass", "container.sass", "flex.sass", "caption.sass"
 
 
-$space-1: 4px
-$space-2: 10px
-$space-3: 16px
-$space-4: 20px
-$space-5: 28px
-$space-6: 44px
-
+$space-1: 12px
+$space-2: 32px
+$space-3: 36px
+$space-4: 40px
+$space-5: 44px
+$space-6: 60px
     
 body 
     font-family: 'Lato', sans-serif
@@ -29,15 +28,19 @@ header
     width: 100%
     &--
         &space_xxl
-            padding: 60px  0
+            padding-top: 80px 
+            padding-bottom: 40px
             @media (min-width: 768px)
-                padding: 180px  0
+                padding-top: 220px 
+                padding-bottom: 168px
         &space_l
             padding: 40px  0
         &space_m
-            padding-bottom: 20px    
+            padding-bottom: 28px    
         &space_top
             padding-top: 60px
+            @media (min-width: 768px)
+                padding-top: 100px
         &space_bottom
             margin-bottom: -60px 
             @media (min-width: 768px)
@@ -48,19 +51,27 @@ header
             background: #ffffff  
         &mod
             width: 100vw
-            background: rgba(255, 255, 255, 0.8 )
-           
-            
+            background: rgba(255, 255, 255, 0.8 )    
+            padding-top: 160px
+            padding-bottom: 96px
           
     &__
         &pannel
             position: relative
             
             &--
-                &space_xl
-                    margin-bottom: 32px
+                &space_s
+                    margin-bottom: $space-1
+                &space_m
+                    margin-bottom: $space-2
                 &space_l
-                    margin-bottom: 20px            
+                    margin-bottom: $space-3     
+                &space_xl
+                    margin-bottom: $space-4
+                &space_xxl
+                    margin-bottom: $space-5
+                &space_xxxl
+                    margin-bottom: $space-6  
                 &bordered_grey
                     border: 1px solid #c9c8c8
                     padding: 8px                          
@@ -90,6 +101,7 @@ header
         &body
             position: absolute
             height: 100%
+
 .icon
     &--
         &color_grey
@@ -105,13 +117,6 @@ header
             padding: 10px         
             font-size: 20px             
                     
-
-
-
-                   
-
-
-
 .arrow
     display: block
     width: 20px
@@ -129,20 +134,16 @@ header
                 position: absolute
                 width: 4px
                 height: 16px
-                background: white
-                
-               
+                background: white       
                 
             &::before
                 transform: rotate(45deg)
-                left: 12px
-              
+                left: 12px        
 
             &::after
                 transform: rotate(-45deg)
                 left: 2px
-               
-       
+
             
             @keyframes arrow--down
                 0%
