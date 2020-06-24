@@ -1,4 +1,4 @@
-let projectFolder = require("path").basename(__dirname), // final folder name
+let projectFolder = "dist", // final folder name
     sourceFolder = "src"; // work folder name
 
 let path = {           //object with pathes to the file          
