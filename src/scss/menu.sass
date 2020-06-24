@@ -1,11 +1,8 @@
-@import "burger.sass";
+@import "burger.sass"
 
 .menu 
-    display: flex
-    flex-wrap: wrap
-    justify-content: space-between
-
-    @include menu;
+ 
+    @include menu
 
     &__item 
         padding: 8px 12px
@@ -20,10 +17,9 @@
                 color: #fff
                 font-weight: bold 
 
-    @media (min-width: 768px) 
+    +mq-md ()
         &--appearance-md 
-            display: flex
-            justify-content: flex-end
+          
             height: inherit
             background: inherit
             opacity: 1

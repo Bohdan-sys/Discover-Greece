@@ -11,7 +11,7 @@ $flex-end: flex-end
     margin: 0 -16px
 
     &--
-        &zero_space
+        &space_none
             margin: 0
         &justify_between 
             justify-content: $space-between
@@ -21,7 +21,8 @@ $flex-end: flex-end
         &justify_start
             justify-content: $flex-start
         &justify_end
-            justify-content: $flex-end
+            +mq-adaptive ()
+                justify-content: $flex-end
             
         &align_center
             align-items: $center
