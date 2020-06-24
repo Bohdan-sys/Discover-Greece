@@ -1,4 +1,4 @@
-@import "nullstyle.scss", "inputs.sass", "datepicker.scss", "buttons.sass", "section.sass", "columns.sass", "menu.sass", "burger.sass", "container.sass", "flex.sass", "caption.sass"
+@import "nullstyle.scss", "media/index.sass", "inputs.sass", "datepicker.scss", "buttons.sass", "section.sass", "columns.sass", "menu.sass", "burger.sass", "container.sass", "flex.sass", "caption.sass"
 
 
 $space-1: 12px
@@ -30,8 +30,8 @@ header
         &space_xxl
             padding-top: 80px 
             padding-bottom: 40px
-            @media (min-width: 768px)
-                padding-top: 220px 
+            +mq-md()
+                padding-top: 220px
                 padding-bottom: 168px
         &space_l
             padding: 40px  0
@@ -39,11 +39,11 @@ header
             padding-bottom: 28px    
         &space_top
             padding-top: 60px
-            @media (min-width: 768px)
+            +mq-md()
                 padding-top: 100px
         &space_bottom
             margin-bottom: -60px 
-            @media (min-width: 768px)
+            +mq-md()
                 margin-bottom: -96px
         &bg_grey
             background: #f0f0f0  
@@ -51,9 +51,12 @@ header
             background: #ffffff  
         &mod
             width: 100vw
-            background: rgba(255, 255, 255, 0.8 )    
-            padding-top: 160px
-            padding-bottom: 96px
+            background: rgba(255, 255, 255, 0.8 )  
+            padding-top: 80px  
+            padding-bottom: 48px
+            +mq-md()  
+                padding-top: 160px
+                padding-bottom: 96px
           
     &__
         &pannel

@@ -1,6 +1,7 @@
-$screen-sm: 768px
-$screen-md: 992px
-$screen-lg: 1200px
+$mq-small: 576px
+$mq-medium: 768px
+$mq-large: 992px
+$mq-ex-large: 1200px
 
     
 $space-s: 28px
@@ -15,22 +16,24 @@ $space-xxl: 100px
 
 .container
     @extend %center
-    @media (min-width: $screen-sm)
-        max-width: $screen-sm - 8px
-    @media (min-width: $screen-md)
-        max-width: $screen-md - 8px
-    @media (min-width: $screen-lg)
-        max-width: $screen-lg - 8px
+    +mq-sm ()
+        max-width: $mq-small - 8px
+    +mq-md ()
+        max-width: $mq-medium - 8px
+    +mq-lg ()
+        max-width: $mq-large - 8px
+    +mq-xl ()
+        max-width: $mq-ex-large - 8px
     &--
         &space_m
             padding: $space-m 4px
         &space_s
             padding: $space-s - 20px 4px
-            @media (min-width: $screen-sm)
+            +mq-md ()
                 padding: $space-s 4px
         &space_l
             padding: $space-l 4px
-            @media (min-width: $screen-sm)
+            +mq-md ()
                 padding: $space-xl 4px
         &space_xl
             padding: $space-xl 4px    

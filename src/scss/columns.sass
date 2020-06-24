@@ -1,28 +1,24 @@
+
 /* ---- cells ----*/
 $cells: 12
 
-$queries: (sm: 768px, md: 992px, lg: 1200px)
-
-
+@function cell-width($index, $cells) 
+    @return 100% / $cells * $index
 
 .cell
     padding: 0 16px
     &--
         &zero_space
-            padding: 0
-  
-          
-
-        @for $i from 1 through $cells 
-            &#{$i}
-                width: 100% / $cells * $i
-                @each $query, $value in $queries
-                    @media (min-width: $value)
-                        &-#{$query}
-                            width: 100% / $cells * $i
-        @media (min-width: 768px)
-            &display_flex
+            +mq-adaptive()
+                padding: 0
+        &display_flex
+            +mq-adaptive()
                 display: flex
-                flex-wrap: wrap
-               
+                flex-wrap: wrap        
+            
+        @for $i from 1 through $cells
+            &#{$i}
+                $columns: cell-width($i, $cells)
+                +mq-adaptive()
+                    width: $columns              
                 

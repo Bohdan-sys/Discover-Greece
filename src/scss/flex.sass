@@ -16,7 +16,8 @@ $flex-end: flex-end
         &justify_between 
             justify-content: $space-between
         &justify_center
-            justify-content: $center
+            +mq-adaptive ()
+                justify-content: $center
         &justify_start
             justify-content: $flex-start
         &justify_end
